@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class SaleService {
 
-
     private FishBreadSeller fishBreadSeller;
     private Customer customer;
 
@@ -38,4 +37,6 @@ public class SaleService {
         System.out.println("붕어빵 장수의 금고 돈 확인: " + fishBreadSeller.getSafe().getMoney() + "원");
     }
 }
+
+
 

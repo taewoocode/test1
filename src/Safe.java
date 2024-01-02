@@ -17,7 +17,4 @@ public class Safe {
     public void deductMoney(int amount){
         money -= amount;
     }
-
-
-
 }
