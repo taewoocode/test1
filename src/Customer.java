@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+
+public class Customer {
+
+    private int money;
+    private ArrayList<FishBread> ownedFishBreads = new ArrayList<>();
+
+
+    public Customer(int money){
+        this.money = money;
+    }
+
+    public int getMoney(){
+        return money;
+    }
+
+    public ArrayList<FishBread> getOwnedFishBreads(){
+        return ownedFishBreads;
+    }
+
+    public void orderfishbreads(FishBread fishBread, int count, FishBreadSeller seller){
+        seller.sellFishBread(fishBread, count);
+        if(count > 0 && count <= seller.getAvailableFishBreads().size()){
+            for(int i = 0; i < count; i++){
+                ownedFishBreads.add(fishBread);
+
+            }
+        }
+    }
+
+    public void eatFishBread(int index){
+        if(index >= 0  && index < ownedFishBreads.size()){
+            FishBread fishBread = ownedFishBreads.remove(index);
+            System.out.println("아이 맛있다~ " + fishBread.getFlavor() + "맛이네~");
+            }else {
+            System.out.println("잘못된 번호");
+        }
+    }
+}
+
+
+
+
